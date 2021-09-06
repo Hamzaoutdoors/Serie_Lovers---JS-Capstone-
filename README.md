@@ -74,7 +74,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Hamzaoutdoors/Leaderboard-API/issues).
+Feel free to check the [issues page](https://github.com/Hamzaoutdoors/js_capstone/issues).
 
 # Show your support
 
