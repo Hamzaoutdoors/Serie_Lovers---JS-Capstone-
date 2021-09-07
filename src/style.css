@@ -6,7 +6,7 @@
   --primary_color: #ffc55c;
 }
 
-body { 
+body {
   overflow-x: hidden;
 }
 
@@ -45,9 +45,17 @@ body {
 
 /* Home page content */
 
+.show-image {
+  width: 50%;
+  height: 75%;
+}
 
 @media only screen and (max-width: 992px) {
   .logo {
     margin: 0 1rem;
+  }
+
+  .show-image {
+    width: 100%;
   }
 }
