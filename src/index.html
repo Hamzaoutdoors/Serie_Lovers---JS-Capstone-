@@ -12,7 +12,7 @@
 
 <body>
   <div class="root">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><img src="./assets/images/logo.png" alt="logo" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -29,12 +29,16 @@
       </div>
     </nav>
     <main>
-      <section id="homePage" class="row row-cols-1 row-cols-md-3 g-4 p-3"></section>
-
+      <div id="homePage" class="row row-cols-1 row-cols-md-3 g-4 p-3">
+        
+            <div class="spinner-border mx-auto" role="status" id="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+      </div>
     </main>
-    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-light">
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-light shadow">
       <div class="container text-center">
-        <small>Copyright &copy; Series Lover</small>
+        <small>Copyright &copy; Series Lover <img src="./assets/images/logo.png" alt="logo" class="footer-logo"></small>
       </div>
     </footer>
   </div>
