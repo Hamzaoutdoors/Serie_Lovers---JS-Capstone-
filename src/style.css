@@ -58,6 +58,35 @@ body {
   margin-left: 1rem;
 }
 
+.popup-bg {
+  justify-content: center;
+  position: fixed;
+  opacity: 0.95;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.foreground-overlay {
+  height: 97%;
+  width: 95%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 130;
+}
+
+.close-btn {
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 992px) {
   .logo {
     margin: 0 1rem;
