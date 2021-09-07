@@ -2,8 +2,10 @@ import getShows from '../function/request.js';
 
 const homePage = async () => {
   const container = document.getElementById('homePage');
+  const counter = document.getElementById('counter')
   let myShows = await getShows();
   myShows = myShows.slice(0, 21);
+  counter.innerHTML = `(${myShows.length})`
   myShows.forEach((show) => {
     const showDiv = document.createElement('div');
     showDiv.classList.add('col-4');
