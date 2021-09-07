@@ -28,7 +28,7 @@
     <p align="center">screen shot of the Leader Board</p>
 </p>
 
-# To-DO-List Live Demo
+# Capstone Live Demo
 [Live Demo Link]()
 
 # Built with 🔨
