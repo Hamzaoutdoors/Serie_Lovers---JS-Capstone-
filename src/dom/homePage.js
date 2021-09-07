@@ -3,7 +3,7 @@ import getShows from '../function/request.js';
 const homePage = async () => {
   const container = document.getElementById('homePage');
   let myShows = await getShows();
-  myShows = myShows.slice(0, 9);
+  myShows = myShows.slice(0, 21);
   myShows.forEach((show) => {
     const showDiv = document.createElement('div');
     showDiv.classList.add('col-4');

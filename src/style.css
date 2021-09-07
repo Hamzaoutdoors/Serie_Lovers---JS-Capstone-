@@ -6,6 +6,10 @@
   --primary_color: #ffc55c;
 }
 
+body { 
+  overflow-x: hidden;
+}
+
 *,
 *::after,
 *::before {
