@@ -17,9 +17,13 @@ const homePage = async () => {
     const movieTitle = document.createElement('h5');
     movieTitle.classList.add('p-2');
     movieTitle.innerHTML = show.name;
+    const commentButton = document.createElement('button');
+    commentButton.classList.add('btn', 'btn-warning');
+    commentButton.innerHTML = 'comment';
 
     showDiv.appendChild(myImage);
     showDiv.appendChild(movieTitle);
+    showDiv.appendChild(commentButton);
     container.appendChild(showDiv);
   });
 };
