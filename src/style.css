@@ -1,9 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300&display=swap');
 
-* {
+/* Variables */
+:root {
+  --primary_color: #ffc55c;
+}
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Playfair Display', serif;
+}
+
+.logo {
+  width: 6rem;
+  padding: 5px;
+  margin: 0 9rem;
+  border: 2px inset var(--primary_color);
+  border-radius: 50%;
+}
+
+.nav-link {
+  display: inline;
+  margin-left: 3.5rem;
+}
+
+.nav-link:hover {
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+  .logo {
+    margin: 0 1rem;
+  }
 }
