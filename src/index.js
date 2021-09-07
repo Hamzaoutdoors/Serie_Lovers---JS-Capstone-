@@ -4,3 +4,6 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands'; */
 import './style.css';
+import homePage from './dom/homePage.js';
+
+homePage();
