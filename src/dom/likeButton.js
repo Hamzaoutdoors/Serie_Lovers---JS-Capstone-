@@ -1,5 +1,7 @@
 /* eslint-disable no-use-before-define */
-import { postLike, getLikes } from '../function/itemLikes.js';
+import { postLike, fetchData } from '../function/itemLikes.js';
+
+const involvementLikesURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ng5U76WLJamDi8o1N7mp/Likes/';
 
 const showLikes = (response, span, idItem) => {
   const data = response.filter((item) => item.item_id === idItem);
@@ -19,7 +21,7 @@ const likeButton = (itemId, div) => {
   heartBtn.classList.add('heart-btn');
   heartBtn.id = itemId;
   content.classList.add('content');
-  getLikes()
+  fetchData(involvementLikesURL)
     .then((response) => {
       showLikes(response, likeSpan, `item${itemId}`);
     });
@@ -40,7 +42,7 @@ const likeButton = (itemId, div) => {
     setTimeout(() => {
       document.getElementById(`${id}`).innerHTML = '🤍';
     }, 10);
-    getLikes()
+    fetchData(involvementLikesURL)
       .then((response) => {
         showLikes(response, likeSpan, id);
       });

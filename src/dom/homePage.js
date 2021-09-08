@@ -14,7 +14,7 @@ const homePage = async () => {
   myShows.forEach((show) => {
     const showDiv = document.createElement('div');
     showDiv.classList.add('d-flex', 'flex-column', 'align-items-center');
-    showDiv.classList.add('col-4');
+    showDiv.classList.add('col-12');
     const myImage = document.createElement('img');
     myImage.classList.add('show-image');
     const imageUrl = show.image.original;
