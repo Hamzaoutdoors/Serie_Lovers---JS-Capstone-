@@ -1,7 +1,9 @@
 /* eslint-disable import/no-cycle */
+/* eslint-disable no-use-before-define */
 
 import getShows from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
+import likeButton from './likeButton.js';
 
 const homePage = async () => {
   const container = document.getElementById('homePage');
@@ -12,7 +14,7 @@ const homePage = async () => {
   myShows.forEach((show) => {
     const showDiv = document.createElement('div');
     showDiv.classList.add('d-flex', 'flex-column', 'align-items-center');
-    showDiv.classList.add('col-4');
+    showDiv.classList.add('col-12');
     const myImage = document.createElement('img');
     myImage.classList.add('show-image');
     const imageUrl = show.image.original;
@@ -23,8 +25,13 @@ const homePage = async () => {
     ImagePop.setAttribute('src', imageUrl);
 
     const movieTitle = document.createElement('h5');
-    movieTitle.classList.add('p-2');
+    movieTitle.classList.add('p-2', 'mt-3');
     movieTitle.innerHTML = show.name;
+
+    const likeDiv = document.createElement('div');
+    likeDiv.appendChild(movieTitle);
+    likeDiv.classList.add('d-flex', 'flex-column', 'align-items-center', 'justify-content-center');
+    likeButton(show.id, likeDiv);
 
     const movieTitlePop = document.createElement('h5');
     movieTitlePop.classList.add('p-2');
@@ -47,10 +54,19 @@ const homePage = async () => {
     });
 
     showDiv.appendChild(myImage);
-    showDiv.appendChild(movieTitle);
+    showDiv.appendChild(likeDiv);
     showDiv.appendChild(commentButton);
     container.appendChild(showDiv);
   });
 };
 
 export default homePage;
+
+/* function Toggle1(e) {
+  console.log(e.target);
+  if (btnvar1.style.color === 'red') {
+    btnvar1.style.color = 'grey';
+  } else {
+    btnvar1.style.color = 'red';
+  }
+} */
