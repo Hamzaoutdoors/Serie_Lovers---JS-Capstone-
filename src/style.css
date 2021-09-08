@@ -87,6 +87,61 @@ body {
   cursor: pointer;
 }
 
+/* Like button */
+.heart-btn {
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.heart {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  color: grey;
+  margin-left: 1rem;
+}
+
+.heart i:hover {
+  border: none;
+}
+
+.content {
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content.heart-active {
+  border-color: #f9b9c4;
+  background: #fbd0d8;
+}
+
+.text {
+  font-size: 1rem;
+  margin-left: 10px;
+  color: grey;
+}
+
+.numb {
+  width: 100%;
+  font-size: 1rem;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #9c9496;
+}
+
+.numb.heart-active::before {
+  color: #000;
+}
+
+.text.heart-active {
+  color: #000;
+}
+
 @media only screen and (max-width: 992px) {
   .logo {
     margin: 0 1rem;

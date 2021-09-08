@@ -1,7 +1,9 @@
 /* eslint-disable import/no-cycle */
+/* eslint-disable no-use-before-define */
 
 import getShows from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
+import likeButton from './likeButton.js';
 
 const homePage = async () => {
   const container = document.getElementById('homePage');
@@ -48,9 +50,19 @@ const homePage = async () => {
 
     showDiv.appendChild(myImage);
     showDiv.appendChild(movieTitle);
+    likeButton(show.id, showDiv);
     showDiv.appendChild(commentButton);
     container.appendChild(showDiv);
   });
 };
 
 export default homePage;
+
+/* function Toggle1(e) {
+  console.log(e.target);
+  if (btnvar1.style.color === 'red') {
+    btnvar1.style.color = 'grey';
+  } else {
+    btnvar1.style.color = 'red';
+  }
+} */
