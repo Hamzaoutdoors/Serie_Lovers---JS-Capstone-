@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 import homePage from './homePage.js';
 
-const commentPopUp = (image, title, language, runtime, status, rating) => {
+const commentPopUp = (image, title, language, runtime, status, rating, commentsArray = [{ username: 'No', comment: 'comments' }]) => {
   const popUpOverLay = document.getElementById('overlay');
   popUpOverLay.classList.remove('d-none');
   popUpOverLay.classList.add('d-block', 'd-flex');
@@ -51,12 +51,24 @@ const commentPopUp = (image, title, language, runtime, status, rating) => {
   popUpFooter.appendChild(popUpFooterLeft);
   popUpFooter.appendChild(popUpFooterRight);
 
+  const commentSection = document.createElement('div');
+  const commentHeading = document.createElement('h5');
+  commentHeading.innerHTML = 'Comments';
+  commentSection.appendChild(commentHeading);
+
+  commentsArray.forEach((comment) => {
+    const myComment = document.createElement('p');
+    myComment.innerHTML = `${comment.username}: ${comment.comment}`;
+    commentSection.appendChild(myComment);
+  });
+
   title.classList.add('mt-4');
 
   foreGroundPopUp.appendChild(headerPopUp);
   foreGroundPopUp.appendChild(image);
   foreGroundPopUp.appendChild(title);
   foreGroundPopUp.appendChild(popUpFooter);
+  foreGroundPopUp.appendChild(commentSection);
 
   popUpOverLay.appendChild(foreGroundPopUp);
 };
