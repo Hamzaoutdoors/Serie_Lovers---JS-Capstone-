@@ -89,7 +89,7 @@ body {
 
 /* Like button */
 .heart-btn {
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem 0;
   cursor: pointer;
 }
 
@@ -118,12 +118,6 @@ body {
 .content.heart-active {
   border-color: #f9b9c4;
   background: #fbd0d8;
-}
-
-.text {
-  font-size: 1rem;
-  margin-left: 10px;
-  color: grey;
 }
 
 .numb {

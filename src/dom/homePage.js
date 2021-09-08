@@ -25,8 +25,13 @@ const homePage = async () => {
     ImagePop.setAttribute('src', imageUrl);
 
     const movieTitle = document.createElement('h5');
-    movieTitle.classList.add('p-2');
+    movieTitle.classList.add('p-2', 'mt-3');
     movieTitle.innerHTML = show.name;
+
+    const likeDiv = document.createElement('div');
+    likeDiv.appendChild(movieTitle);
+    likeDiv.classList.add('d-flex', 'flex-column', 'align-items-center', 'justify-content-center');
+    likeButton(show.id, likeDiv);
 
     const movieTitlePop = document.createElement('h5');
     movieTitlePop.classList.add('p-2');
@@ -49,8 +54,7 @@ const homePage = async () => {
     });
 
     showDiv.appendChild(myImage);
-    showDiv.appendChild(movieTitle);
-    likeButton(show.id, showDiv);
+    showDiv.appendChild(likeDiv);
     showDiv.appendChild(commentButton);
     container.appendChild(showDiv);
   });
