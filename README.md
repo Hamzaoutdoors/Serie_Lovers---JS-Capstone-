@@ -68,7 +68,7 @@
 👤 **Emmanuel Isabirye**
 
 - GitHub: [Emmanuelaaron](https://github.com/Emmanuelaaron)
-- LinkedIn : [Emmanuel Isabirye](https://www.linkedin.com/in/fullstackwebdev-emma/)
+- LinkedIn : [Emmanuel Isabirye](https://www.linkedin.com/in/fullstackwebdev-emma/) 
 
 # 🤝 Contributing
 
