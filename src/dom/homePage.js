@@ -1,16 +1,15 @@
 /* eslint-disable import/no-cycle */
-/* eslint-disable no-use-before-define */
-
 import { getShows, getComments } from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
 import likeButton from './likeButton.js';
+import itemsCounter from '../function/itemsCounter.js';
 
 const homePage = async () => {
   const container = document.getElementById('homePage');
   const counter = document.getElementById('counter');
   let myShows = await getShows();
   myShows = myShows.slice(0, 21);
-  counter.innerHTML = `(${myShows.length})`;
+  counter.innerHTML = `(${itemsCounter(myShows)})`;
   myShows.forEach((show) => {
     const showDiv = document.createElement('div');
     showDiv.classList.add('d-flex', 'flex-column', 'align-items-center');
@@ -21,11 +20,11 @@ const homePage = async () => {
     myImage.setAttribute('src', imageUrl);
 
     const ImagePop = document.createElement('img');
-    ImagePop.classList.add('show-image');
+    ImagePop.classList.add('popup-image');
     ImagePop.setAttribute('src', imageUrl);
 
     const movieTitle = document.createElement('h5');
-    movieTitle.classList.add('p-2', 'mt-3');
+    movieTitle.classList.add('p-2', 'px-5', 'mt-3', 'title-bg');
     movieTitle.innerHTML = show.name;
 
     const likeDiv = document.createElement('div');
@@ -38,7 +37,7 @@ const homePage = async () => {
     movieTitlePop.innerHTML = show.name;
 
     const commentButton = document.createElement('button');
-    commentButton.classList.add('btn', 'btn-warning');
+    commentButton.classList.add('btn', 'btn-warning', 'comment-bg');
     commentButton.innerHTML = 'comment';
     commentButton.id = `item${show.id}`;
     commentButton.addEventListener('click', async (e) => {
@@ -74,12 +73,3 @@ const homePage = async () => {
 };
 
 export default homePage;
-
-/* function Toggle1(e) {
-  console.log(e.target);
-  if (btnvar1.style.color === 'red') {
-    btnvar1.style.color = 'grey';
-  } else {
-    btnvar1.style.color = 'red';
-  }
-} */

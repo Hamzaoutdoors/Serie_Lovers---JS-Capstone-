@@ -5,7 +5,7 @@ const involvementLikesURL = 'https://us-central1-involvement-api.cloudfunctions.
 
 const postLike = async (itemId) => {
   try {
-    const response = await fetch(involvementLikesURL, {
+    await fetch(involvementLikesURL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -14,8 +14,6 @@ const postLike = async (itemId) => {
         item_id: `item${itemId}`,
       }),
     });
-    const data = await response.json();
-    console.log(data);
   } catch (error) {
     console.error(error);
   }
