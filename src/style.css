@@ -46,8 +46,8 @@ body {
 /* Home page content */
 
 .show-image {
-  width: 50%;
-  height: 75%;
+  width: 33%;
+  height: 44%;
   box-shadow: 5px 5px 15px 5px #000;
 }
 
@@ -142,6 +142,6 @@ body {
   }
 
   .show-image {
-    width: 100%;
+    width: 54%;
   }
 }

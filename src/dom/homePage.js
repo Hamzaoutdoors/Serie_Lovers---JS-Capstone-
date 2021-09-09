@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-use-before-define */
 
-import getShows from '../function/request.js';
+import { getShows, getComments } from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
 import likeButton from './likeButton.js';
 
@@ -41,16 +41,29 @@ const homePage = async () => {
     commentButton.classList.add('btn', 'btn-warning');
     commentButton.innerHTML = 'comment';
     commentButton.id = `item${show.id}`;
-    commentButton.addEventListener('click', (e) => {
+    commentButton.addEventListener('click', async (e) => {
       e.preventDefault();
-      commentPopUp(
-        ImagePop,
-        movieTitlePop,
-        show.language,
-        show.runtime,
-        show.status,
-        show.rating.average,
-      );
+      const myComments = await getComments(show.id);
+      if (myComments.error) {
+        commentPopUp(
+          ImagePop,
+          movieTitlePop,
+          show.language,
+          show.runtime,
+          show.status,
+          show.rating.average,
+        );
+      } else {
+        commentPopUp(
+          ImagePop,
+          movieTitlePop,
+          show.language,
+          show.runtime,
+          show.status,
+          show.rating.average,
+          myComments,
+        );
+      }
     });
 
     showDiv.appendChild(myImage);
