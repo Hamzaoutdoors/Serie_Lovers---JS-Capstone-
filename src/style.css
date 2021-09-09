@@ -9,7 +9,7 @@
 
 body {
   background-color: #f39f86;
-  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  background-image: linear-gradient(315deg, #6d3929 0%, #f9d976 74%);
   overflow-x: hidden;
 }
 
@@ -54,6 +54,12 @@ strong {
 }
 
 .show-image {
+  width: 50%;
+  height: 75%;
+  box-shadow: 5px 5px 15px 5px #000;
+}
+
+.popup-image {
   width: 33%;
   height: 44%;
   box-shadow: 5px 5px 15px 5px #000;
@@ -186,7 +192,11 @@ strong {
     margin: 0 1rem;
   }
 
-  .show-image {
+  .popup-image {
     width: 54%;
+  }
+
+  .show-image {
+    width: 80%;
   }
 }
