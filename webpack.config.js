@@ -7,9 +7,15 @@ module.exports = {
     contentBase: './dist',
   },
   plugins: [
+
     new HtmlWebpackPlugin({
-      // Please change the template path!
+      inject: 'body',
       template: './src/index.html',
+      filename: 'index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+      },
     }),
   ],
   output: {

@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-use-before-define */
 
-import getShows from '../function/request.js';
+import { getShows, getComments } from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
 import likeButton from './likeButton.js';
 
@@ -25,7 +25,7 @@ const homePage = async () => {
     ImagePop.setAttribute('src', imageUrl);
 
     const movieTitle = document.createElement('h5');
-    movieTitle.classList.add('p-2', 'mt-3');
+    movieTitle.classList.add('p-2', 'px-5', 'mt-3', 'title-bg');
     movieTitle.innerHTML = show.name;
 
     const likeDiv = document.createElement('div');
@@ -38,19 +38,32 @@ const homePage = async () => {
     movieTitlePop.innerHTML = show.name;
 
     const commentButton = document.createElement('button');
-    commentButton.classList.add('btn', 'btn-warning');
+    commentButton.classList.add('btn', 'btn-warning', 'comment-bg');
     commentButton.innerHTML = 'comment';
     commentButton.id = `item${show.id}`;
-    commentButton.addEventListener('click', (e) => {
+    commentButton.addEventListener('click', async (e) => {
       e.preventDefault();
-      commentPopUp(
-        ImagePop,
-        movieTitlePop,
-        show.language,
-        show.runtime,
-        show.status,
-        show.rating.average,
-      );
+      const myComments = await getComments(show.id);
+      if (myComments.error) {
+        commentPopUp(
+          ImagePop,
+          movieTitlePop,
+          show.language,
+          show.runtime,
+          show.status,
+          show.rating.average,
+        );
+      } else {
+        commentPopUp(
+          ImagePop,
+          movieTitlePop,
+          show.language,
+          show.runtime,
+          show.status,
+          show.rating.average,
+          myComments,
+        );
+      }
     });
 
     showDiv.appendChild(myImage);

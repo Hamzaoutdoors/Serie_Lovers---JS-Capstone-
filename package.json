@@ -2,10 +2,11 @@
   "private": true,
   "name": "capstone_js",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
+    "watch": "webpack --watch",
     "start": "webpack serve --open",
     "deploy": "npm run build && gh-pages -d dist",
     "build": "webpack"
@@ -48,6 +49,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "canvas": "^2.8.0",
     "lodash": "^4.17.21"
   }
 }

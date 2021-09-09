@@ -4,9 +4,12 @@
 /* Variables */
 :root {
   --primary_color: #ffc55c;
+  --secondary-color: #ffd68a;
 }
 
 body {
+  background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
   overflow-x: hidden;
 }
 
@@ -44,17 +47,43 @@ body {
 }
 
 /* Home page content */
+strong {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #000;
+}
 
 .show-image {
-  width: 50%;
-  height: 75%;
+  width: 33%;
+  height: 44%;
   box-shadow: 5px 5px 15px 5px #000;
+}
+
+.title-bg {
+  background-color: var(--secondary-color);
+  box-shadow: 2px 7px 27px -1px #a36a00;
+  border-radius: 5px;
+}
+
+.comment-bg {
+  box-shadow: 2px 7px 27px -1px #a36a00;
+  border-radius: 5px;
 }
 
 /* footer */
 
+#sticky-footer {
+  position: fixed;
+  height: 8vh;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+}
+
 .footer-logo {
-  width: 10%;
+  width: 3rem;
   margin-left: 1rem;
 }
 
@@ -107,12 +136,13 @@ body {
 }
 
 .content {
-  padding: 0 6px;
+  padding: 3px 9px;
   display: flex;
   align-items: center;
   border: 2px solid #eae2e1;
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
+  background-color: white;
 }
 
 .content.heart-active {
@@ -128,6 +158,12 @@ body {
   color: #9c9496;
 }
 
+.red-bg {
+  background-color: #ff726f;
+  color: #000;
+  border: 2px solid #000;
+}
+
 .numb.heart-active::before {
   color: #000;
 }
@@ -136,12 +172,21 @@ body {
   color: #000;
 }
 
+/* Show Page */
+#header {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 992px) {
   .logo {
     margin: 0 1rem;
   }
 
   .show-image {
-    width: 100%;
+    width: 54%;
   }
 }

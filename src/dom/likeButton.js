@@ -6,9 +6,9 @@ const involvementLikesURL = 'https://us-central1-involvement-api.cloudfunctions.
 const showLikes = (response, span, idItem) => {
   const data = response.filter((item) => item.item_id === idItem);
   if (data.length !== 0) {
-    span.innerText = `${data[0].likes} likes`;
+    span.innerHTML = `<strong>${data[0].likes}</strong>  likes`;
   } else {
-    span.innerText = '0 likes';
+    span.innerHTML = '<strong>0</strong>  likes';
   }
 };
 
@@ -37,10 +37,12 @@ const likeButton = (itemId, div) => {
     ev.preventDefault();
     if (id && id.includes('item')) {
       document.getElementById(`${id}`).innerHTML = '❤️';
+      content.classList.add('red-bg');
       await postLike(likeId);
     }
     setTimeout(() => {
       document.getElementById(`${id}`).innerHTML = '🤍';
+      content.classList.remove('red-bg');
     }, 10);
     fetchData(involvementLikesURL)
       .then((response) => {
