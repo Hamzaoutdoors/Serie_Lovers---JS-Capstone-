@@ -52,20 +52,65 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
   popUpFooter.appendChild(popUpFooterRight);
 
   const commentSection = document.createElement('div');
+  commentSection.id = 'commentSection';
   const commentHeading = document.createElement('h5');
   commentHeading.innerHTML = 'Comments';
   commentSection.appendChild(commentHeading);
 
   commentsArray.forEach((comment) => {
     const myComment = document.createElement('p');
+    myComment.className = 'commentClass';
     myComment.innerHTML = `${comment.username}: ${comment.comment}`;
     commentSection.appendChild(myComment);
   });
 
+  const addComment = document.createElement('div');
+  const addCommHeading = document.createElement('h5');
+  addCommHeading.innerHTML = 'Add Comment';
+
+  const imageDiv = document.createElement('div');
+  imageDiv.appendChild(image);
+  imageDiv.classList.add(
+    'w-100', 'h-50',
+    'd-flex', 'justify-content-evenly',
+    'align-items-center',
+  );
+  const form = document.createElement('form');
+
+  const nameInput = document.createElement('input');
+  nameInput.required = true;
+  nameInput.id = 'name';
+  nameInput.placeholder = 'Your Name';
+
+  const commentInput = document.createElement('textarea');
+  commentInput.required = true;
+  commentInput.id = 'comment';
+  commentInput.placeholder = 'Your Insights';
+  const myBr = document.createElement('br');
+  const myBr1 = document.createElement('br');
+  const myBr2 = document.createElement('br');
+  const myBr3 = document.createElement('br');
+
+  const button = document.createElement('button');
+  button.id = 'commentBtn';
+  button.innerText = 'Comment';
+
+  form.appendChild(nameInput);
+  form.appendChild(myBr);
+  form.appendChild(myBr1);
+  form.appendChild(commentInput);
+  form.appendChild(myBr2);
+  form.appendChild(myBr3);
+  form.appendChild(button);
+
+  addComment.appendChild(addCommHeading);
+  addComment.appendChild(form);
+
+  imageDiv.appendChild(addComment);
   title.classList.add('mt-4');
 
   foreGroundPopUp.appendChild(headerPopUp);
-  foreGroundPopUp.appendChild(image);
+  foreGroundPopUp.appendChild(imageDiv);
   foreGroundPopUp.appendChild(title);
   foreGroundPopUp.appendChild(popUpFooter);
   foreGroundPopUp.appendChild(commentSection);
