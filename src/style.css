@@ -25,8 +25,8 @@ body {
 /* Navbar */
 
 .logo {
-  width: 5rem;
-  padding: -25px;
+  width: 6rem;
+  padding: 5px;
   margin: 0 9rem;
   border: 2px inset var(--primary_color);
   border-radius: 50%;
@@ -61,7 +61,7 @@ strong {
 
 .popup-image {
   width: 33%;
-  height: 44%;
+  height: 79%;
   box-shadow: 5px 5px 15px 5px #000;
 }
 
@@ -193,7 +193,8 @@ strong {
   }
 
   .popup-image {
-    width: 54%;
+    width: 20vw;
+    margin-right: 2rem;
   }
 
   .show-image {

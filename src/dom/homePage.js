@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import { getShows, getComments } from '../function/request.js';
+import { getShows, getComments, postComment } from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
 import likeButton from './likeButton.js';
 import itemsCounter from '../function/itemsCounter.js';
@@ -40,6 +40,7 @@ const homePage = async () => {
     commentButton.classList.add('btn', 'btn-warning', 'comment-bg');
     commentButton.innerHTML = 'comment';
     commentButton.id = `item${show.id}`;
+
     commentButton.addEventListener('click', async (e) => {
       e.preventDefault();
       const myComments = await getComments(show.id);
@@ -63,6 +64,23 @@ const homePage = async () => {
           myComments,
         );
       }
+      const myName = document.getElementById('name');
+      const commentInput = document.getElementById('comment');
+      const buttonComment = document.getElementById('commentBtn');
+      const commentSection = document.getElementById('commentSection');
+      const commentClass = document.getElementsByClassName('commentClass');
+      buttonComment.addEventListener('click', (e) => {
+        e.preventDefault();
+        postComment(myName.value, commentInput.value, `item${show.id}`);
+        const newComment = document.createElement('p');
+        newComment.innerHTML = `${myName.value}: ${commentInput.value}`;
+        commentSection.appendChild(newComment);
+        if (commentClass[0].innerHTML === 'No: comments') {
+          commentClass[0].innerHTML = '';
+        }
+        myName.value = '';
+        commentInput.value = '';
+      });
     });
 
     showDiv.appendChild(myImage);
