@@ -19,13 +19,13 @@
 <div align="center">
  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/> <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black"/> <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/></div>
 
-# Series lover
+# JS-Capstone: Series lover
 
 > The Series lover website displays scores submitted by different series. It also allows users to submit their comments in every serie show. All data is preserved thanks to the external [TVmaze API :](https://www.tvmaze.com/api).
  
  <p align="center">
     <img alt="Screenshot" src="##############"width="700" height="300">
-    <p align="center">screen shot of the Leader Board</p>
+    <p align="center">screen shot of the desktop version</p>
 </p>
 
 # Capstone Live Demo
@@ -38,6 +38,7 @@
 - Git & Github
 - Unit testing with Jest
 - github pages
+- Visual Studio
 - API (async & await)
 - fix errors with Linters
 - Features of webpack and plugins already included
@@ -50,12 +51,22 @@
 
 - Navigate to your desired directory in your local machine using the terminal.
 
-- Clone repository by running git clone ```git@github.com:Hamzaoutdoors/Leaderboard-API.git``` in your local terminal
+- Clone repository by running git clone 
 
-- Run the following command to install the needed dependencies
-```npm install```
+```sh
+$ git clone https://github.com/Hamzaoutdoors/js_capstone.git
+```
+in your local terminal
 
-- Use the following commands to npm run start to start the Webpack Dev server and serve the files from the dist directory npm run build to complile build all source files into the dist directory ```npm run watch``` to set webpack into watch mode so that the build is automatically run whenever changes are made to any of the source files.
+- After, run the following commands in your terminal:
+```sh 
+$ cd JS-Capstone
+$ npm install
+$ npm run build
+$ cd dist
+```
+
+- OR Use the following commands to npm run start to start the Webpack Dev server and serve the files from the dist directory npm run build to complile build all source files into the dist directory ```npm run watch``` to set webpack into watch mode so that the build is automatically run whenever changes are made to any of the source files.
 
 # Authors
 
