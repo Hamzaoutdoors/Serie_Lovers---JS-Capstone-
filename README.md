@@ -87,6 +87,7 @@ $ cd dist
 
 - GitHub: [Emmanuelaaron](https://github.com/Emmanuelaaron)
 - LinkedIn : [Emmanuel Isabirye](https://www.linkedin.com/in/fullstackwebdev-emma/) 
+- Twitter: [Emmanuel Isabirye](https://twitter.com/EmmanuelIsabir1)
 
 # 🤝 Contributing
 
