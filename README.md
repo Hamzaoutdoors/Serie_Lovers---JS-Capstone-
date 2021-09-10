@@ -24,12 +24,19 @@
 > The Series lover website displays scores submitted by different series. It also allows users to submit their comments in every serie show. All data is preserved thanks to the external [TVmaze API :](https://www.tvmaze.com/api).
  
  <p align="center">
-    <img alt="Screenshot" src="##############"width="700" height="300">
-    <p align="center">screen shot of the desktop version</p>
+    <img alt="Screenshot" src="https://user-images.githubusercontent.com/80895497/132874077-4edf055c-eb84-4326-9d7c-f5aa67fec688.png"width="700" height="300">
+</p>
+<p align="center">
+    <img alt="Popup" src="https://user-images.githubusercontent.com/80895497/132874290-3cfe25ba-9f64-45dc-8066-359eb212e6b2.png"width="700" height="300">
+    <p align="center">screen shot of our project</p>
 </p>
 
 # Capstone Live Demo
-[Live Demo Link]()
+[Live Demo Link](https://hamzaoutdoors.github.io/js_capstone/)
+
+## Video presentation
+
+[![Video](https://user-images.githubusercontent.com/80895497/132873016-3cb89f3c-f0d3-4d69-b48f-e43810653a23.png)](https://drive.google.com/file/d/1nxTdAebrj8g08sjhaXpOBEbDju1GlYig/view?usp=sharing)
 
 # Built with 🔨
 - HTML5, CSS3
