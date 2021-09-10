@@ -5,6 +5,7 @@
 :root {
   --primary_color: #ffc55c;
   --secondary-color: #ffd68a;
+  --dark-color: #754c00;
 }
 
 body {
@@ -77,6 +78,12 @@ strong {
 }
 
 /* footer */
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
 
 #sticky-footer {
   position: fixed;
@@ -89,8 +96,8 @@ strong {
 }
 
 .footer-logo {
-  width: 3rem;
-  margin-left: 1rem;
+  width: 4.2rem;
+  margin: 0 2rem;
 }
 
 .popup-bg {
@@ -115,6 +122,8 @@ strong {
   margin-top: 10px;
   position: relative;
   z-index: 130;
+  border: 3px solid var(--dark-color);
+  border-radius: 10px;
 }
 
 .close-btn {
@@ -193,11 +202,16 @@ strong {
   }
 
   .popup-image {
-    width: 20vw;
+    width: 25vw;
     margin-right: 2rem;
   }
 
   .show-image {
     width: 80%;
+  }
+
+  .footer-logo {
+    width: 2rem;
+    margin: 0 0.5rem;
   }
 }
