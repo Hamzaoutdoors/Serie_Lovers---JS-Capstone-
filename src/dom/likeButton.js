@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import { postLike, fetchData } from '../function/itemLikes.js';
 
 const involvementLikesURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9YYfJY5gRMr3MgkvmC9i/Likes/';
