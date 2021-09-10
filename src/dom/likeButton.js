@@ -1,13 +1,14 @@
 /* eslint-disable no-use-before-define */
 import { postLike, fetchData } from '../function/itemLikes.js';
 
-const involvementLikesURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ng5U76WLJamDi8o1N7mp/Likes/';
+const involvementLikesURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9YYfJY5gRMr3MgkvmC9i/Likes/';
 
 const showLikes = (response, span, idItem) => {
   const data = response.filter((item) => item.item_id === idItem);
   if (data.length !== 0) {
     span.innerHTML = `<strong>${data[0].likes}</strong>  likes`;
-  } else {
+  }
+  if (data.length === 0) {
     span.innerHTML = '<strong>0</strong>  likes';
   }
 };
