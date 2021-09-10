@@ -10,7 +10,7 @@ const getShows = async () => {
 };
 
 const getComments = async (itemId) => {
-  const involvementUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ng5U76WLJamDi8o1N7mp/comments?item_id=item${itemId}`;
+  const involvementUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9YYfJY5gRMr3MgkvmC9i/comments?item_id=item${itemId}`;
   const response = await fetch(involvementUrl, {
     method: 'GET',
   });
@@ -19,7 +19,7 @@ const getComments = async (itemId) => {
 };
 
 const postComment = async (name, comment, itemId) => {
-  const postUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ng5U76WLJamDi8o1N7mp/comments';
+  const postUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9YYfJY5gRMr3MgkvmC9i/comments';
   const postData = {
     item_id: itemId,
     username: name,
