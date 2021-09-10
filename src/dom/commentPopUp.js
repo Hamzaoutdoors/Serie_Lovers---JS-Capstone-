@@ -42,6 +42,7 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
   const popUpFooterRight = document.createElement('div');
   const statusPop = document.createElement('h5');
   const ratingPop = document.createElement('h5');
+  ratingPop.classList.add('w-100');
   statusPop.innerHTML = `Status: ${status}`;
   ratingPop.innerHTML = `Rating: ${rating}`;
 
@@ -79,12 +80,16 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
 
   const nameInput = document.createElement('input');
   nameInput.required = true;
+  nameInput.classList.add('form-control', 'p-2', 'w-100', 'bd-highlight');
   nameInput.id = 'name';
+  nameInput.required = true;
   nameInput.placeholder = 'Your Name';
 
   const commentInput = document.createElement('textarea');
   commentInput.required = true;
+  commentInput.classList.add('form-control', 'p-2', 'w-100');
   commentInput.id = 'comment';
+  commentInput.required = true;
   commentInput.placeholder = 'Your Insights';
   const myBr = document.createElement('br');
   const myBr1 = document.createElement('br');
@@ -92,6 +97,7 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
   const myBr3 = document.createElement('br');
 
   const button = document.createElement('button');
+  button.classList.add('btn', 'btn-warning', 'p-1');
   button.id = 'commentBtn';
   button.innerText = 'Comment';
 
@@ -107,7 +113,7 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
   addComment.appendChild(form);
 
   imageDiv.appendChild(addComment);
-  title.classList.add('mt-4');
+  title.classList.add('mt-2');
 
   foreGroundPopUp.appendChild(headerPopUp);
   foreGroundPopUp.appendChild(imageDiv);
