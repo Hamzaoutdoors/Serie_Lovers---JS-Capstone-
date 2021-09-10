@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import homePage from './homePage.js';
+import itemsCounter from '../function/itemsCounter.js';
 
 const commentPopUp = (image, title, language, runtime, status, rating, commentsArray = [{ username: 'No', comment: 'comments' }]) => {
   const popUpOverLay = document.getElementById('overlay');
@@ -55,13 +56,17 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
   const commentSection = document.createElement('div');
   commentSection.id = 'commentSection';
   const commentHeading = document.createElement('h5');
-  commentHeading.innerHTML = 'Comments';
+  const itemsCount = itemsCounter(commentsArray);
+  commentHeading.innerHTML = `Comments(${itemsCount})`;
   commentSection.appendChild(commentHeading);
 
   commentsArray.forEach((comment) => {
     const myComment = document.createElement('p');
     myComment.className = 'commentClass';
     myComment.innerHTML = `${comment.username}: ${comment.comment}`;
+    if (comment.username === 'No') {
+      commentHeading.innerHTML = 'Comments(0)';
+    }
     commentSection.appendChild(myComment);
   });
 

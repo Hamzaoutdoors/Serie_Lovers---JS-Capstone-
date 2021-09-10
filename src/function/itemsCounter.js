@@ -1,3 +1,3 @@
-const itemsCounter = (shows) => shows.length;
+const itemsCounter = (items) => items.length;
 
 export default itemsCounter;
