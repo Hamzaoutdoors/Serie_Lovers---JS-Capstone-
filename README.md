@@ -21,7 +21,7 @@
 
 # JS-Capstone: Series lover
 
-> The Series lover website displays scores submitted by different series. It also allows users to submit their comments in every serie show. All data is preserved thanks to the external [TVmaze API](https://www.tvmaze.com/api).
+> The Series lover website displays scores submitted by different series. It also allows users to submit their comments in every serie show. All data is preserved thanks to the external [TVmaze API](https://www.tvmaze.com/api), the user can like his favourite serie thanks to [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
  
  <p align="center">
     <img alt="Screenshot" src="https://user-images.githubusercontent.com/80895497/132874077-4edf055c-eb84-4326-9d7c-f5aa67fec688.png"width="700" height="300">
