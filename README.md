@@ -38,7 +38,7 @@
 </p>
 
 # Capstone Live Demo
-[Live Demo Link](https://hamzaoutdoors.github.io/js_capstone/)
+[Live Demo Link](https://hamzaoutdoors.github.io/Serie_Lovers---JS-Capstone-/)
 
 ## Video presentation
 
