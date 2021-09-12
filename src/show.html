@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="root">
+    <main class="root">
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><img src="./assets/images/logo.png" alt="logo"
@@ -31,14 +31,16 @@
                 </div>
             </div>
         </nav>
-        <main>
+        <section>
             <div id="showPage"
                 class="row row-cols-1 row-cols-md-3 g-4 p-3 d-flex flex-column justify-content-center align-items-center">
-                <h1 id="header">Find movie for Today</h1>
+                <header class="d-flex justify-content-center m-3 w-100">
+                    <h1 id="header">Find Movie <span class="color-orange">for</span> Today</h1>
+                </header>
                 <div class="spinner-border mx-auto" role="status" id="loading">
                     <span class="sr-only">Loading...</span>
                 </div>
-                <div id="random-show" class="card mb-3 shadow">
+                <div id="random-show" class="card mb-3 shadow showCard">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="./assets/images/logo.png" class="img-fluid rounded-start" alt="show image">
@@ -53,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
         <footer id="sticky-footer" class="flex-shrink-0 shadow d-flex align-items-center">
             <div class="container text-center">
                 <small>Copyright &copy; Series Lover <img src="./assets/images/logo.png" alt="logo"
@@ -61,7 +63,7 @@
             </div>
         </footer>
         <div id="overlay" class="popup-bg d-none"></div>
-    </div>
+    </main>
 
     <script src="https://use.fontawesome.com/dbae1144e4.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

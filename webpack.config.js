@@ -17,6 +17,14 @@ module.exports = {
         collapseWhitespace: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './src/show.html',
+      filename: 'show.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+      },
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
