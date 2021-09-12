@@ -23,6 +23,10 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+section {
+  margin-bottom: 5rem;
+}
+
 /* Navbar */
 
 .logo {
@@ -46,6 +50,19 @@ body {
 }
 
 /* Home page content */
+.color-orange {
+  color: var(--dark-color);
+  font-family: 'Pacifico', cursive;
+}
+
+.showCard {
+  padding: 2rem 0;
+  box-shadow: -1px 1px 11px 3px #000;
+  background-color: #ffdc159f;
+  border-radius: 25px 0 25px 0;
+  color: var(--black);
+}
+
 strong {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -53,9 +70,14 @@ strong {
 }
 
 .show-image {
-  width: 50%;
+  width: 60%;
   height: 75%;
   box-shadow: 5px 5px 15px 5px #000;
+}
+
+.show-image:hover {
+  transition: 1.1s;
+  transform: scale(1.1);
 }
 
 .popup-image {
@@ -73,6 +95,7 @@ strong {
 .comment-bg {
   box-shadow: 2px 7px 27px -1px #a36a00;
   border-radius: 5px;
+  margin: 20px;
 }
 
 /* footer */
@@ -188,15 +211,42 @@ a {
 /* Show Page */
 #header {
   font-family: "Trebuchet MS", sans-serif;
-  font-size: 5em;
+  font-size: 4em;
   letter-spacing: -2px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px double black;
   text-transform: uppercase;
 }
 
+/* Popup module */
+
+.comments-countainer {
+  height: 100px;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 5px;
+  border: 3px solid #9c9496;
+}
+
+.commentClass {
+  border-bottom: 1px double var(--dark-color);
+  padding-bottom: 5px;
+}
+
 @media only screen and (max-width: 992px) {
+  #header {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 2em;
+    border-bottom: 1px double black;
+    text-transform: capitalize;
+  }
+
   .logo {
     margin: 0 1rem;
+  }
+
+  .showCard {
+    border-radius: 25px;
+    height: 75%;
   }
 
   .popup-image {

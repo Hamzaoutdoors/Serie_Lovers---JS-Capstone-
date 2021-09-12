@@ -55,19 +55,25 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
 
   const commentSection = document.createElement('div');
   commentSection.id = 'commentSection';
+  commentSection.classList.add('w-75');
   const commentHeading = document.createElement('h5');
+  commentHeading.classList.add('mb-3');
   const itemsCount = itemsCounter(commentsArray);
   commentHeading.innerHTML = `Comments(${itemsCount})`;
   commentSection.appendChild(commentHeading);
+
+  const commentsCountainer = document.createElement('div');
 
   commentsArray.forEach((comment) => {
     const myComment = document.createElement('p');
     myComment.className = 'commentClass';
     myComment.innerHTML = `${comment.username}: ${comment.comment}`;
     if (comment.username === 'No') {
-      commentHeading.innerHTML = 'Comments(0)';
+      commentHeading.innerHTML = 'No comments for this show';
+      commentsCountainer.classList.remove('comments-countainer');
     }
-    commentSection.appendChild(myComment);
+    commentsCountainer.classList.add('comments-countainer');
+    commentsCountainer.appendChild(myComment);
   });
 
   const addComment = document.createElement('div');
@@ -124,8 +130,8 @@ const commentPopUp = (image, title, language, runtime, status, rating, commentsA
   foreGroundPopUp.appendChild(imageDiv);
   foreGroundPopUp.appendChild(title);
   foreGroundPopUp.appendChild(popUpFooter);
+  commentSection.appendChild(commentsCountainer);
   foreGroundPopUp.appendChild(commentSection);
-
   popUpOverLay.appendChild(foreGroundPopUp);
 };
 
