@@ -8,11 +8,13 @@ const homePage = async () => {
   const container = document.getElementById('homePage');
   const counter = document.getElementById('counter');
   let myShows = await getShows();
-  myShows = myShows.slice(0, 21);
+  myShows = myShows.slice(160, 169);
   counter.innerHTML = `(${itemsCounter(myShows)})`;
   myShows.forEach((show) => {
+    const colDiv = document.createElement('div');
+    colDiv.classList.add('col');
     const showDiv = document.createElement('div');
-    showDiv.classList.add('d-flex', 'flex-column', 'align-items-center');
+    showDiv.classList.add('card', 'h-100', 'border-warning', 'd-flex', 'flex-column', 'align-items-center', 'showCard', 'mb-3');
     showDiv.classList.add('col-12');
     const myImage = document.createElement('img');
     myImage.classList.add('show-image');
@@ -24,11 +26,10 @@ const homePage = async () => {
     ImagePop.setAttribute('src', imageUrl);
 
     const movieTitle = document.createElement('h5');
-    movieTitle.classList.add('p-2', 'px-5', 'mt-3', 'title-bg');
+    movieTitle.classList.add('p-2', 'px-4', 'mt-3', 'title-bg');
     movieTitle.innerHTML = show.name;
 
     const likeDiv = document.createElement('div');
-    likeDiv.appendChild(movieTitle);
     likeDiv.classList.add('d-flex', 'flex-column', 'align-items-center', 'justify-content-center');
     likeButton(show.id, likeDiv);
 
@@ -37,9 +38,11 @@ const homePage = async () => {
     movieTitlePop.innerHTML = show.name;
 
     const commentButton = document.createElement('button');
-    commentButton.classList.add('btn', 'btn-warning', 'comment-bg');
+    commentButton.classList.add('btn', 'btn-warning', 'comment-bg', 'h-50', 'font-weight-bold');
     commentButton.innerHTML = 'comment';
     commentButton.id = `item${show.id}`;
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('d-flex', 'justify-content-between');
 
     commentButton.addEventListener('click', async (e) => {
       e.preventDefault();
@@ -84,9 +87,12 @@ const homePage = async () => {
     });
 
     showDiv.appendChild(myImage);
-    showDiv.appendChild(likeDiv);
-    showDiv.appendChild(commentButton);
-    container.appendChild(showDiv);
+    showDiv.appendChild(movieTitle);
+    newDiv.appendChild(commentButton);
+    newDiv.appendChild(likeDiv);
+    showDiv.appendChild(newDiv);
+    colDiv.appendChild(showDiv);
+    container.appendChild(colDiv);
   });
 };
 

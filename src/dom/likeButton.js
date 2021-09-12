@@ -28,14 +28,14 @@ const likeButton = (itemId, div) => {
   likeSpan.id = `numb${itemId}`;
   likeSpan.setAttribute('class', 'numb');
   heartIcon.classList.add('heart');
-  heartIcon.id = `item${itemId}`;
+  heartIcon.id = `like${itemId}`;
   content.appendChild(likeSpan);
   heartIcon.innerHTML = '🤍';
   heartIcon.addEventListener('click', async (ev) => {
     const { id } = ev.target;
     const likeId = id.slice(4);
     ev.preventDefault();
-    if (id && id.includes('item')) {
+    if (id && id.includes('like')) {
       document.getElementById(`${id}`).innerHTML = '❤️';
       content.classList.add('red-bg');
       await postLike(likeId);
@@ -46,7 +46,7 @@ const likeButton = (itemId, div) => {
     }, 10);
     fetchData(involvementLikesURL)
       .then((response) => {
-        showLikes(response, likeSpan, id);
+        showLikes(response, likeSpan, `item${likeId}`);
       });
   });
   heartBtn.appendChild(content);
