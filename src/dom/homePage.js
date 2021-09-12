@@ -94,6 +94,7 @@ const homePage = async () => {
     showDiv.appendChild(newDiv);
     colDiv.appendChild(showDiv);
     container.appendChild(colDiv);
+
   });
 
   const randomButton = document.getElementById('random-btn');
@@ -101,6 +102,7 @@ const homePage = async () => {
   randomButton.addEventListener('click', () => {
     const randomNum = Math.floor(Math.random() * (200) + 1);
     displayShow(randomNum);
+
   });
 };
 
