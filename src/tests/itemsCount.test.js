@@ -80,4 +80,8 @@ describe('shows list counter', () => {
     // Assert
     expect(count).toBe(4);
   });
+
+  test('data is an array of object', () => {
+    expect(shows).toEqual(expect.any(Array));
+  });
 });

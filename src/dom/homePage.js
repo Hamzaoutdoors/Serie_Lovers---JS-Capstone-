@@ -3,6 +3,7 @@ import { getShows, getComments, postComment } from '../function/request.js';
 import commentPopUp from './commentPopUp.js';
 import likeButton from './likeButton.js';
 import itemsCounter from '../function/itemsCounter.js';
+import displayShow from './randomShow.js';
 
 const homePage = async () => {
   const container = document.getElementById('homePage');
@@ -26,7 +27,7 @@ const homePage = async () => {
     ImagePop.setAttribute('src', imageUrl);
 
     const movieTitle = document.createElement('h5');
-    movieTitle.classList.add('p-2', 'px-5', 'mt-3', 'title-bg');
+    movieTitle.classList.add('p-2', 'px-4', 'mt-3', 'title-bg');
     movieTitle.innerHTML = show.name;
 
     const likeDiv = document.createElement('div');
@@ -93,6 +94,15 @@ const homePage = async () => {
     showDiv.appendChild(newDiv);
     colDiv.appendChild(showDiv);
     container.appendChild(colDiv);
+
+  });
+
+  const randomButton = document.getElementById('random-btn');
+
+  randomButton.addEventListener('click', () => {
+    const randomNum = Math.floor(Math.random() * (200) + 1);
+    displayShow(randomNum);
+
   });
 };
 
