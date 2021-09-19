@@ -21,7 +21,7 @@
 
 </br>
  <div align="center">
-  <em align="center" style>" Programming is the breaking of one big impossible task into several very small possible tasks.. "</em><strong> - Good programmer</strong>
+  <em align="center" style>" Programming is the breaking of one big impossible task into several very small possible tasks.."</em><strong> - Good programmer</strong>
   </div>
   
 # JS-Capstone: Series lover
