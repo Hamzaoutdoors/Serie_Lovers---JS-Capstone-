@@ -45,10 +45,6 @@
 # Capstone Live Demo
 [Live Demo Link](https://hamzaoutdoors.github.io/Serie_Lovers---JS-Capstone-/)
 
-## Video presentation
-
-[![Video](https://user-images.githubusercontent.com/80895497/132873016-3cb89f3c-f0d3-4d69-b48f-e43810653a23.png)](https://drive.google.com/file/d/1nxTdAebrj8g08sjhaXpOBEbDju1GlYig/view?usp=sharing)
-
 # Built with 🔨
 - HTML5, CSS3
 - JavaScript-ES6
